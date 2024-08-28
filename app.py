@@ -68,7 +68,7 @@ def prompt_func(query, n):
             "Greendex is a scoring system that companies fill out a form for. The score is about how environmentally friendly you are. The form that the companies have to fill out have these questions: "
             "1.1 Sirket Adi, 1.2 Sektor, 1.3 Merkez Lokasyonu, 1.4 Calisan Sayisi, 2.1 Birincil Enerji Kaynagi, 2.2 Atik Yonetim Sistemi Varligi, 2.3 Karbon Ayak Izi, 2.4 Su Kullanimi ve koruma uygulamalari, 3.1 Surdurebilirlik Projeleri, 3.2 Cevresel duzenlemelere uyumluluk"
             "Please classify the following query into one of the following categories, taking in consideration what greendex is and how the form is structured: "
-            "'General Greendex Info', 'Greendex Form Specific Inquiry', 'Greeting', 'Gibberish(nonsense)', 'Other'"
+            "'General Greendex Info', 'Greendex Form Specific Inquiry', 'Greeting', 'Not Understandable Word/Phrase', 'Other'"
             "Your response should ONLY be one of the categories provided, with no additional words. So your ourput format is only the category from one of the provided ones, with no additonal words"
             "Query: " + query
         )
@@ -120,7 +120,7 @@ def get_best_matching_text(llm, index, query):
     elif category == "Greeting":
         prompt2 = prompt_func(query, 2)
         result = openaiAPI(prompt2)
-    elif category == "Gibberish(nonsense)":
+    elif category == "Not Understandable Word/Phrase":
         result = "Söylediğinizi tam olarak anlayamadım, lütfen tekrar sorabilir misiniz? Size en iyi şekilde yardımcı olmak istiyorum."
     elif category == "Other":
         result = "Ne yazık ki bu konuda size yardımcı olamıyorum. Greendex Başvuru Formu ile ilgili herhangi bir sorunuz varsa, lütfen sormaktan çekinmeyin."
