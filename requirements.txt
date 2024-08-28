@@ -1,0 +1,12 @@
+streamlit
+langchain_openai
+langchain
+langchain_community
+openai 
+chromadb
+chroma
+pypdf
+sentence_transformers
+pysqlite3-binary
+requests
+protobuf==3.20.*
