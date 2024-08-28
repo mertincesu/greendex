@@ -123,7 +123,7 @@ def get_best_matching_text(llm, index, query):
         result = openaiAPI(prompt2)
     elif category == "Not Understandable Word/Phrase":
         result = "Söylediğinizi tam olarak anlayamadım, lütfen tekrar sorabilir misiniz? Size en iyi şekilde yardımcı olmak istiyorum."
-    elif category == "Other":
+    elif category == "Other Topic":
         result = "Ne yazık ki bu konuda size yardımcı olamıyorum. Greendex Başvuru Formu ile ilgili herhangi bir sorunuz varsa, lütfen sormaktan çekinmeyin."
 
     return result
