@@ -120,7 +120,7 @@ def get_best_matching_text(llm, index, query):
     elif category == "Greeting":
         prompt2 = prompt_func(query, 2)
         result = openaiAPI(prompt2)
-    elif category == "Gibberish":
+    elif category == "Gibberish(nonsense)":
         result = "Söylediğinizi tam olarak anlayamadım, lütfen tekrar sorabilir misiniz? Size en iyi şekilde yardımcı olmak istiyorum."
     elif category == "None":
         result = "Ne yazık ki bu konuda size yardımcı olamıyorum. Greendex Başvuru Formu ile ilgili herhangi bir sorunuz varsa, lütfen sormaktan çekinmeyin."
